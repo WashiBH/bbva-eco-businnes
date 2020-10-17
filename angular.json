@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bbva-eco-business"
+    }
+  },
+  "defaultProject": "bbva-eco-business",
+  "cli": {
+    "analytics": false
+  }
 }
