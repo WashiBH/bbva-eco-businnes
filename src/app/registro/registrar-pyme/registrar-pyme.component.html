@@ -1,1 +1,62 @@
-<p>registrar-pyme works!</p>
+<div style="height: 100%">
+    <div class='navbar'>
+        <ul fxLayout="row" fxLayoutAlign="space-around center">
+            <li><a>CREAR CUENTA</a></li>
+            <li><a><img src="../assets/images/logo.png" alt="" width="150" height="100"/></a></li>
+        </ul>        
+    </div>
+    <div fxLayout="row">
+        <form [formGroup]="form" fxLayout="column" fxFlex="100" fxLayoutGap = "10px">
+            <div class="div-success-color">Datos de la Empresa</div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="text" placeholder="Nro Tarjeta" formControlName="nroTarjeta" required />
+                </div>
+                <div fxFlex="40">
+                    <input type="password" placeholder="Clave Web" formControlName="claveWeb" required />
+                </div>
+            </div>
+            <div class="div-success-color">Monto consumo de suministros - Último mes</div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="number" placeholder="Luz" formControlName="consumoLuz" required />
+                </div>
+                <div fxFlex="40">
+                    <input type="number" placeholder="Agua" formControlName="consumoAgua" required />
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="number" placeholder="Gas" formControlName="consumoGas" required />
+                </div>
+                <div fxFlex="40"></div>
+            </div>
+            <div class="div-success-color">Comunicación</div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="text" placeholder="Correo Electronico" formControlName="correo" required />
+                </div>
+                <div fxFlex="40">
+                    <input type="text" placeholder="Telefono/ Celular" formControlName="telefono" required />
+                </div>
+            </div>
+            <div class="div-success-color">Cuenta</div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="text" placeholder="Nombre Usuario" formControlName="usuario" required />
+                </div>
+                <div fxFlex="40">
+                    <input type="text" placeholder="Contraseña" formControlName="password" required />
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="40">
+                    <input type="text" placeholder="Reintroducir contraseña" formControlName="repeatPassword" required />
+                </div>
+                <div fxFlex="40">
+                    <button type="submit" class="btn-success-our">REGISTRAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

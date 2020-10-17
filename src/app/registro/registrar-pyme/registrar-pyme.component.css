@@ -1,0 +1,33 @@
+.navbar {
+    margin-bottom: 0;
+  }
+  
+  .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color:#346ca4;
+  }
+  
+  .navbar li {
+      float: left;
+      margin-bottom: 0;
+  }
+  
+  .navbar li a {
+      display: block;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+.div-success-color{
+    background-color: #2bd39c;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
