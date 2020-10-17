@@ -2,12 +2,12 @@
     <div class="container-login">
         <div class="login-more" style="background-image: url(../assets/images/login-bg.png)"></div>
         <div class="wrap-login" fxLayout="row" fxLayoutAlign="space-around center">
-            <form [formGroup]="form" (ngSubmit)="onLogin(form.value)" fxLayout="column" fxLayoutAlign="space-around center">
+            <form [formGroup]="form" (ngSubmit)="onRuc(form.value.ruc)" fxLayout="column" fxLayoutAlign="space-around center">
                 <div>
-                    <input type="text" maxlength = "11" placeholder="RUC" formControlName="password" required />
+                    <input type="text" maxlength = "11" placeholder="RUC" formControlName="ruc" required />
                 </div>
                 <div>
-                    <button type="submit">INGRESAR AQUI</button>
+                    <button type="submit">INGRESAR</button>
                 </div>
             </form>
         </div>

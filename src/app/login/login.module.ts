@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginSiginComponent } from './login-sigin/login-sigin.component';
+import { LoginDialog, LoginSiginComponent, LoguearseSiginComponent } from './login-sigin/login-sigin.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const COMPONENTS = [
-  LoginSiginComponent
+  LoginSiginComponent,
+  LoginDialog,
+  LoguearseSiginComponent
 ];
 
 const MODULES = [
@@ -14,7 +17,8 @@ const MODULES = [
   FlexLayoutModule,
   FormsModule,
   ReactiveFormsModule,
-  MatCardModule
+  MatCardModule,
+  MatDialogModule
 ];
 
 @NgModule({

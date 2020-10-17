@@ -8,6 +8,8 @@ import { LoginModule } from './login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioModule } from './inicio/inicio.module';
+import { RegistroModule } from './registro/registro.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexLayoutModule,
     ChatModule,
     LoginModule,
+    InicioModule,
+    RegistroModule,
     BrowserAnimationsModule
   ],
   providers: [],
