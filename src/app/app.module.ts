@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioModule } from './inicio/inicio.module';
 import { RegistroModule } from './registro/registro.module';
+import { MisArtefactosModule } from './mis-artefactos/mis-artefactos.module';
+import { PagoSuministroModule } from './pago-suministro/pago-suministro.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { RegistroModule } from './registro/registro.module';
     LoginModule,
     InicioModule,
     RegistroModule,
+    MisArtefactosModule,
+    PagoSuministroModule,
     BrowserAnimationsModule
   ],
   providers: [],

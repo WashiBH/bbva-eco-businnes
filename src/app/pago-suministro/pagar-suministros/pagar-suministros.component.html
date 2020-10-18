@@ -1,0 +1,67 @@
+<div style="height: 100%">
+    <div class='navbar'>
+        <ul fxLayout="row" fxLayoutAlign="space-around center">
+            <li><a>PAGAR SUMINISTRO</a></li>
+            <li><a><img src="../assets/images/logo.png" alt="" width="150" height="100"/></a></li>
+        </ul>        
+    </div>
+    <div fxLayout="row">
+        <form [formGroup]="form" fxLayout="column" fxFlex="100" fxLayoutGap = "10px">
+            <mat-horizontal-stepper>
+                <mat-step>
+                    <ng-template matStepLabel>Elige que suministros pagar</ng-template>
+                    <div fxLayout="row" fxLayoutAlign="space-around center">
+                        <div fxFlex="30">
+                            <label for="suministro">Categoria</label>
+                            <select id="suministro" formControlName="suministro" placeholder="Categoria" required>
+                                <option value="0184728495">LUZ</option>
+                                <option value="0384728481">AGUA</option>
+                                <option value="0284728466">GAS</option>
+                            </select>
+                        </div>
+                        <div fxFlex="30">
+                            <label for="emisor">Empresa</label>
+                            <select id="emisor" formControlName="emisor" placeholder="Empresa" required>
+                                <option value="SEDAPAL">SEDAPAL</option>
+                                <option value="EPS SEDA LORETO S.A.">EPS SEDA LORETO S.A.</option>
+                                <option value="SEDALIB">SEDALIB</option>
+                            </select>
+                        </div>
+                        <div fxFlex="30">
+                            <label for="cuenta">Cuenta origen</label>
+                            <select id="cuenta" formControlName="cuentaOrigen" placeholder="Cuenta origen" required>
+                                <option value="CUENTA ÚNICA ****7071">CUENTA ÚNICA ****7071</option>
+                                <option value="TARJETA DE CREDITO ****6358">TARJETA DE CREDITO ****6358</option>
+                            </select>
+                        </div>
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Confirma tu pago</ng-template>
+                    <div fxLayout="column" fxLayoutAlign="space-around center">
+                        <div fxFlex="30">
+                            <input type="text" value="{{form.value.emisor}}" readonly/>
+                        </div>
+                        <div fxFlex="30">
+                            <input type="text" value="{{form.value.suministro}}" readonly/>
+                        </div>
+                        <div fxFlex="30">
+                            <input type="text" value="{{form.value.cuentaOrigen}}" readonly/>
+                        </div>
+                        <div fxFlex="30">
+                            <input type="number" placeholder="Monto (S/)" formControlName="monto" required/>
+                        </div>
+                        <div fxFlex="30">
+                            <input type="text" placeholder="Referencia" formControlName="referencia" required/>
+                        </div>
+                    </div>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </form>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+        <button class="btn-success-our" (click)="registrar(form.value)" [disabled]="!form.valid">
+            <span>PAGAR</span>
+        </button>
+    </div>
+</div>

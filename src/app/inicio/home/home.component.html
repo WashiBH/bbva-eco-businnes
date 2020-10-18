@@ -1,11 +1,19 @@
-<div class="container margen" fxLayout="column">
-    <div class="one-container">
-        <button mat-raised-button class="btn-success-our">Realizar pagos de suministro</button>
+<div style="height: 100%">
+    <div class='navbar'>
+        <ul fxLayout="row" fxLayoutAlign="space-around start">
+            <!-- <li><a>MIS ARTEFACTOS</a></li> -->
+            <li><a><img src="../assets/images/logo.png" alt="" width="150" height="100"/></a></li>
+        </ul>        
     </div>
-    <div class="one-container">
-        <button mat-raised-button class="btn-success-our">Calcular mi huella de carbono</button>
-    </div>
-    <div class="one-container">
-        <button mat-raised-button class="btn-success-our">Actualizar artefactos</button>
+    <div class="container margen" fxLayout="column">
+        <div class="one-container">
+            <button mat-raised-button class="btn-success-our" (click)="openPage('pagar-suministros')">Realizar pagos de suministro</button>
+        </div>
+        <div class="one-container">
+            <button mat-raised-button class="btn-success-our">Calcular mi huella de carbono</button>
+        </div>
+        <div class="one-container">
+            <button mat-raised-button class="btn-success-our" (click)="openPage('mis-artefactos')">Actualizar artefactos</button>
+        </div>
     </div>
 </div>

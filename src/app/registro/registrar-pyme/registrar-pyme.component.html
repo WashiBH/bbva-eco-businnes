@@ -54,7 +54,7 @@
                     <input type="text" placeholder="Reintroducir contraseña" formControlName="repeatPassword" required />
                 </div>
                 <div fxFlex="40">
-                    <button type="submit" class="btn-success-our">REGISTRAR</button>
+                    <button class="btn-success-our" [disabled]="!form.valid" (click)="registrar(form.value)">REGISTRAR</button>
                 </div>
             </div>
         </form>

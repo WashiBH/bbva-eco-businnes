@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { User, RUCS_REGISTRADOS, LISTA_USUARIOS } from '../login-class/user.model';
+import { User, RUCS_REGISTRADOS, LISTA_USUARIOS, Entidad } from '../login-class/user.model';
 
 @Component({
   selector: 'login-sigin',
@@ -11,14 +11,20 @@ import { User, RUCS_REGISTRADOS, LISTA_USUARIOS } from '../login-class/user.mode
 })
 export class LoginSiginComponent implements OnInit {
 
-  public listRucs = RUCS_REGISTRADOS;
+  public listEntidades: Array<Entidad> = [];
   public form: FormGroup;
 
   constructor(
     private builder: FormBuilder,
     public dialog: MatDialog,
     private router: Router
-  ) { }
+  ) { 
+    this.listEntidades = <Array<Entidad>>JSON.parse(localStorage.getItem('listEntidades'));
+    if(this.listEntidades === null || this.listEntidades.length === 0){
+      this.listEntidades = [];
+      localStorage.setItem('listEntidades',JSON.stringify([]));
+    }
+  }
 
   ngOnInit(): void {
     this.buildForm();
@@ -35,28 +41,32 @@ export class LoginSiginComponent implements OnInit {
       if(this.existeRuc(ruc)){
         this.router.navigate(['/iniciar-sesion']);
       } else {
-        this.openDialog();
+        this.openDialog(ruc);
       }
     }else{
       alert('RUC INVALIDO');
     }
   }
 
-  openDialog(): void {
+  openDialog(ruc: string): void {
     const dialogRef = this.dialog.open(LoginDialog, {
       width: '320px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if(result){
-        this.router.navigate(["../registrarse"]);
+        let entidad: Entidad = new Entidad();
+        entidad.ruc = ruc;
+        localStorage.setItem('entidad',JSON.stringify(entidad));
+        this.router.navigateByUrl('/registrarse');
+        //this.router.navigate(["../registrarse"]);
       }
     });
   }
 
   existeRuc(ruc: string): boolean {
     let exists: boolean = false;
-    const data = this.listRucs.find(data => data.ruc === ruc);
+    const data = this.listEntidades.find(data => data.ruc === ruc);
     if(data) exists = true;
     return exists;
   }
