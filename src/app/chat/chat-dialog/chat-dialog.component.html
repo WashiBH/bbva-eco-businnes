@@ -1,1 +1,18 @@
-<p>chat-dialog works!</p>
+<div class="limiter">
+    <div class="container-login">
+        <div class="login-more" style="background-image: url(../assets/images/login-bg.png)"></div>
+        <div fxLayout="column" fxLayoutAlign="start" flexLayoutGap="8px">
+            <div>
+                <iframe
+                    allow="microphone;"
+                    width="500"
+                    height="450"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/a1b13561-23c4-4334-a2ec-8ae06b7ee9e9">
+                </iframe>
+            </div>
+            <div class="one-container" fxLayout="row" fxLayoutAlign="center">
+                <button mat-raised-button class="btn-success-our" style="background-color: #0a6827;" (click)="openPage()">Confirmar</button>
+            </div>  
+        </div>
+    </div>
+</div>

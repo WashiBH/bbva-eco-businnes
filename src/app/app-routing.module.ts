@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CalcularHuellaCarbonoComponent } from './calculo-huella/calcular-huella-carbono/calcular-huella-carbono.component';
 import { ChatDialogComponent } from './chat/chat-dialog/chat-dialog.component';
 import { HomeComponent } from './inicio/home/home.component';
 import { LoginSiginComponent, LoguearseSiginComponent } from './login/login-sigin/login-sigin.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'chat-dialog', component: ChatDialogComponent },
   { path: 'mis-artefactos', component: ShowMisArtefactosComponent },
   { path: 'pagar-suministros', component: PagarSuministrosComponent },
+  { path: 'calcular-huella-carbono', component: CalcularHuellaCarbonoComponent },
 	{ path: '**', redirectTo: '/login'}
 ];
 

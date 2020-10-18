@@ -12,6 +12,7 @@ import { InicioModule } from './inicio/inicio.module';
 import { RegistroModule } from './registro/registro.module';
 import { MisArtefactosModule } from './mis-artefactos/mis-artefactos.module';
 import { PagoSuministroModule } from './pago-suministro/pago-suministro.module';
+import { CalculoHuellaModule } from './calculo-huella/calculo-huella.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PagoSuministroModule } from './pago-suministro/pago-suministro.module';
     RegistroModule,
     MisArtefactosModule,
     PagoSuministroModule,
+    CalculoHuellaModule,
     BrowserAnimationsModule
   ],
   providers: [],

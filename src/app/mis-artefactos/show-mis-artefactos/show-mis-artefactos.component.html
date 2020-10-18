@@ -5,64 +5,82 @@
             <li><a><img src="../assets/images/logo.png" alt="" width="150" height="100"/></a></li>
         </ul>        
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-        <mat-card class="mi-card">
-            <mat-card-header>
-              <mat-card-title>Sistema de calefacción</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="../assets/images/calefaccion.png" width="100" height="100">
-            <mat-card-content>
-              <p>
-                hola
-              </p>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="mi-card">
-            <mat-card-header>
-              <mat-card-title>Ventilación enfrentamiento</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="../assets/images/ventilador.png" width="100" height="100">
-            <mat-card-content>
-              <p>
-                hola
-              </p>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="mi-card">
-            <mat-card-header>
-              <mat-card-title>Luminarias</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="../assets/images/luminarias.png" width="100" height="100">
-            <mat-card-content>
-              <p>
-                hola
-              </p>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="mi-card">
-            <mat-card-header>
-              <mat-card-title>Sistema de refrigeración</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="../assets/images/refrigerador.png" width="100" height="100">
-            <mat-card-content>
-              <p>
-                hola
-              </p>
-            </mat-card-content>
-          </mat-card>
-          <mat-card class="mi-card">
-            <mat-card-header>
-              <mat-card-title>Aire acondicionado</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="../assets/images/acondicionado.png" width="100" height="100">
-            <mat-card-content>
-              <p>
-                hola
-              </p>
-            </mat-card-content>
-          </mat-card>
-    </div>
-    <div class="one-container" fxLayout="row" fxLayoutAlign="center">
-        <button mat-raised-button class="btn-success-our" style="background-color: #0a6827;">Confirmar</button>
+    <div class="limiter">
+        <div class="container-login">
+            <div class="login-more" fxLayout="column">
+                <div fxLayout="row">
+                    <mat-card class="mi-card">
+                        <mat-card-header>
+                          <mat-card-title>Sistema de calefacción</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="../assets/images/calefaccion.png" width="100" height="100">
+                        <mat-card-content>
+                          <p style="font-weight: bold;">
+                            Total: S/. 60.22 (90.00 kW)
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+                      <mat-card class="mi-card">
+                        <mat-card-header>
+                          <mat-card-title>Ventilación enfrentamiento</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="../assets/images/ventilador.png" width="100" height="100">
+                        <mat-card-content>
+                          <p style="font-weight: bold;">
+                            Total: S/. 6.02 (9.00 kW)
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+                    <mat-card class="mi-card">
+                        <mat-card-header>
+                            <mat-card-title>Luminarias</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="../assets/images/luminarias.png" width="100" height="100">
+                        <mat-card-content>
+                            <p style="font-weight: bold;">
+                                Total: S/. 45.16 (67.50 kW)
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div fxLayout="row">
+                    <mat-card class="mi-card">
+                        <mat-card-header>
+                            <mat-card-title>Sistema de refrigeración</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="../assets/images/refrigerador.png" width="100" height="100">
+                        <mat-card-content>
+                            <p style="font-weight: bold;">
+                                Total: S/. 144.52 (216.00 kW)
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                    <mat-card class="mi-card">
+                        <mat-card-header>
+                            <mat-card-title>Aire acondicionado</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="../assets/images/acondicionado.png" width="100" height="100">
+                        <mat-card-content>
+                            <p style="font-weight: bold;">
+                                Total: S/. 192.69 (288.00 kW)
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="start" flexLayoutGap="8px">
+                <div>
+                    <iframe
+                        allow="microphone;"
+                        width="350"
+                        height="420"
+                        src="https://console.dialogflow.com/api-client/demo/embedded/a1b13561-23c4-4334-a2ec-8ae06b7ee9e9">
+                    </iframe>
+                </div>
+                <div class="one-container" fxLayout="row" fxLayoutAlign="center">
+                    <button mat-raised-button class="btn-success-our" style="background-color: #0a6827;" (click)="openPage()">Confirmar</button>
+                </div>        
+            </div>
+        </div>
     </div>
 </div>

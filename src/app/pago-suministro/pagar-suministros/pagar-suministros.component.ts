@@ -49,6 +49,7 @@ export class PagarSuministrosComponent implements OnInit {
     listPagosSuministros.push(this.pagoSuministro);
     localStorage.setItem('listPagosSuministros',JSON.stringify(listPagosSuministros));
     localStorage.setItem('pagoSuministro',JSON.stringify(this.pagoSuministro));
+    this.router.navigateByUrl('/bienvenido');
   }
 
   /* openDialog(): void {
