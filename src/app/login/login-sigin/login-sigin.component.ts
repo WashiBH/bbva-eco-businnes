@@ -31,7 +31,7 @@ export class LoginSiginComponent implements OnInit {
   }
 
   onRuc(ruc: string){
-    if(ruc.length === 11){
+    if(ruc !== null && ruc.length === 11){
       if(this.existeRuc(ruc)){
         this.router.navigate(['/iniciar-sesion']);
       } else {
@@ -48,10 +48,8 @@ export class LoginSiginComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
       if(result){
-        window.location.href = '/registrarse';
-        /* this.router.navigate(['/registrarse']); */
+        this.router.navigate(["../registrarse"]);
       }
     });
   }
